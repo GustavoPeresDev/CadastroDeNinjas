@@ -1,7 +1,6 @@
-package dev.javinhasedex.CadastroDeNinjas;
+package dev.javinhasedex.CadastroDeNinjas.Ninjas.Controller.Service;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
