@@ -17,7 +17,7 @@ public class MissoesModel {
 
     private String dificuldadeDaMissao;
 
-    @ManyToMany(mappedBy = "missoes")
+    @OneToMany(mappedBy = "missoes")
     private List<NinjaModel> ninja;
 
 }
