@@ -1,12 +1,17 @@
 package dev.javinhasedex.CadastroDeNinjas.Missoes;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.javinhasedex.CadastroDeNinjas.Ninjas.Controller.Service.NinjaModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
-@Table(name = "tb_missões")
+@Table(name = "tb_missoes")
+@NoArgsConstructor
+@AllArgsConstructor
 public class MissoesModel {
 
     @Id
@@ -18,6 +23,7 @@ public class MissoesModel {
     private String dificuldadeDaMissao;
 
     @OneToMany(mappedBy = "missoes")
-    private List<NinjaModel> ninja;
+    @JsonIgnore
+    private List<NinjaModel> ninjas;
 
 }
